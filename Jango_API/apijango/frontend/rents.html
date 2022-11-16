@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Livraria</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="register" class="grid-item">
+        <p>Cadastrar Locação</p>
+        <input
+          id="code"
+          placeholder="Código"
+          type="text"
+          onblur="validateRentCode(this.id)"
+        />
+        <input
+          id="clientCode"
+          placeholder="Código do cliente"
+          type="text"
+          onblur="validateClientRentCode(this.id)"
+        />
+        <input
+          id="bookCode"
+          placeholder="Código do livro"
+          type="text"
+          onblur="validateBookRentCode(this.id)"
+        />
+        <input
+          id="date"
+          placeholder="Data de locação"
+          type="text"
+          onblur="validateRentDate(this.id)"
+        />
+        <input
+          id="returnDate"
+          placeholder="Data de devolução"
+          type="text"
+          onblur="validateReturnRentDate(this.id)"
+        />
+        <input class="button" type="button" value="Registrar" />
+      </div>
+      <div id="list" class="grid-item">
+        <p>Listar</p>
+        <input class="button" type="button" value="Listar" />
+        <p id="remover-item">Remover item</p>
+        <input
+          id="coderemove"
+          placeholder="Código"
+          type="text"
+          onblur="validateCode(this.id)"
+        />
+        <input
+          class="button"
+          onclick="removeBook(this.id)"
+          type="button"
+          value="Remover"
+        />
+      </div>
+      <a class="pg" href="clients.html">Clientes</a>
+      <a class="pg" href="books.html">Livros</a>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
